@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% load static %}
+
+<img src="{% static 'images/home.jpg' %}" alt="Logo">
+<section class="section container animated fadeIn visible" data-animation="fadeIn" data-animation-delay="1800">
+    <div class="title title-center title-line">
+      <h2>HOW CAN WE HELP ?</h2>
+    </div>
+    <div class="row m-t-20 m-b-40">
+      <div class="col-lg-3 m-t-60">
+      <a href="/comeingsoon">
+        <div class="feature-box center">
+          <div class="icon icon-line icon-gray">
+            <i class="fa fa-film" aria-hidden="true"></i>
+          </div> 
+          <div class="feature-content">
+            <h3 class="feature-title">Browse Our Tiles</h3>
+          </div>
+        </div>
+        </a>
+      </div>
+     
+      <div class="col-lg-3 m-t-60">
+        <a href="/comeingsoon" target="_blank">
+        <div class="feature-box center">
+          <div class="icon icon-line icon-gray">
+            <i class="fa fa-envelope-open" aria-hidden="true"></i>
+          </div> 
+          <div class="feature-content">
+            <h3 class="feature-title">Register For Catalogue</h3>
+          </div>
+        </div>
+        </a>
+      </div>
+       <div class="col-lg-3 m-t-60">
+        <a href="/comeingsoon">
+        <div class="feature-box center">
+          <div class="icon icon-line icon-gray">
+            <i class="fa fa-gift" aria-hidden="true"></i>
+          </div> 
+          <div class="feature-content">
+            <h3 class="feature-title">Delivery Info</h3>
+          </div>
+        </div>
+        </a>
+      </div>
+       <div class="col-lg-3 m-t-60">
+        <a href="/comeingsoon">
+        <div class="feature-box center">
+          <div class="icon icon-line icon-gray">
+            <i class="fa fa-home" aria-hidden="true"></i>
+          </div> 
+          <div class="feature-content">
+            <h3 class="feature-title">Commercial Projects</h3>
+          </div>
+        </div>
+        </a>
+      </div>
+    </div>
+  </section>
+{% endblock %}

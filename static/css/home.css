@@ -1,0 +1,80 @@
+.navbar-nav li:hover > ul.dropdown-menu {
+    display: block;
+}
+.dropdown-submenu {
+    position:relative;
+}
+.dropdown-submenu>.dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top:-6px;
+}
+
+/* rotate caret on hover */
+.dropdown-menu > li > a:hover:after {
+    text-decoration: underline;
+    transform: rotate(-90deg);
+} 
+
+
+.custome{
+    margin-left: 50%;
+}
+.navbar-light .navbar-nav .nav-link {
+    color: white;
+}.bg-light {
+    background-color: grey!important;
+    position: fixed;
+    width: 100%;
+}wrapper .title.title-center {
+    margin-top: 0px;
+}
+#wrapper .title {
+    margin-bottom: 29px;
+}
+.section{
+    margin-top: 20px;
+}
+.section .title {
+    padding-top: 0;
+}
+.title-center {
+    text-align: center;
+}
+.title {
+    font-family: 'Montserrat',arial;
+    position: relative;
+    padding: 2rem 0 1rem 0;
+    margin-bottom: 3rem;
+    overflow: hidden;
+
+}.feature-box.center, .feature-box.center .icon, .feature-box.center .feature-content {
+    float: none;
+    text-align: center;
+    display: block;
+    margin: auto;
+}.feature-box.center .icon {
+    margin-bottom: 25px;
+    width: 88px;
+    height: 88px;
+    line-height: 88px;
+    font-size: 32px;
+}.feature-box.center .icon i {
+    padding: 0;
+}.nc-icon-outline.ui-2_grid-45:before {
+    content: "\e6e6";
+}.feature-box .icon.icon-line, .section-dark .feature-box .icon.icon-line {
+    background: none;
+    border: 1px solid rgba(0,0,0,0.15);
+    color: rgba(0,0,0,0.6);
+    border-radius: 40px;
+}#page{
+    min-height: 600px;
+    padding-top: 60px;
+}.feature-box.center h3.feature-title {
+    font-size: 16px;color: #444;
+}a{
+    text-decoration: none;
+}.menucontact{
+    color: white;
+}
