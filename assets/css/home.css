@@ -26,6 +26,55 @@
     background-color: grey!important;
     position: fixed;
     width: 100%;
-}#wrapper {background: #fff;position: relative; -webkit-animation-fill-mode: both;  animation-fill-mode: both;animation-fill-mode: both;-webkit-transition: all .4s ease-in-out;-moz-transition: all .4s ease-in-out;transition: all .4s ease-in-out;}
-.sticky {-moz-transition: all .1s;-webkit-transition: all .1s;transition: all .1s;}
-.fullwidth {width: 100%;}
+}wrapper .title.title-center {
+    margin-top: 0px;
+}
+#wrapper .title {
+    margin-bottom: 29px;
+}
+.section{
+    margin-top: 20px;
+}
+.section .title {
+    padding-top: 0;
+}
+.title-center {
+    text-align: center;
+}
+.title {
+    font-family: 'Montserrat',arial;
+    position: relative;
+    padding: 2rem 0 1rem 0;
+    margin-bottom: 3rem;
+    overflow: hidden;
+
+}.feature-box.center, .feature-box.center .icon, .feature-box.center .feature-content {
+    float: none;
+    text-align: center;
+    display: block;
+    margin: auto;
+}.feature-box.center .icon {
+    margin-bottom: 25px;
+    width: 88px;
+    height: 88px;
+    line-height: 88px;
+    font-size: 32px;
+}.feature-box.center .icon i {
+    padding: 0;
+}.nc-icon-outline.ui-2_grid-45:before {
+    content: "\e6e6";
+}.feature-box .icon.icon-line, .section-dark .feature-box .icon.icon-line {
+    background: none;
+    border: 1px solid rgba(0,0,0,0.15);
+    color: rgba(0,0,0,0.6);
+    border-radius: 40px;
+}#page{
+    min-height: 600px;
+    padding-top: 60px;
+}.feature-box.center h3.feature-title {
+    font-size: 16px;color: #444;
+}a{
+    text-decoration: none;
+}.menucontact{
+    color: white;
+}
