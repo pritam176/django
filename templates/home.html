@@ -4,61 +4,115 @@
 
 {% load static %}
 
-<img src="{% static 'images/home.jpg' %}" alt="Logo">
+
+<div>
+  <img src="{% static 'images/home.jpg' %}" class="img-fluid" alt="Responsive image">
+</div>
+
 <section class="section container animated fadeIn visible" data-animation="fadeIn" data-animation-delay="1800">
-    <div class="title title-center title-line">
-      <h2>HOW CAN WE HELP ?</h2>
-    </div>
-    <div class="row m-t-20 m-b-40">
-      <div class="col-lg-3 m-t-60">
+  <div class="title title-center title-line">
+    <h2>HOW CAN WE HELP ?</h2>
+  </div>
+  <div class="row m-t-20 m-b-40">
+    <div class="col-lg-3 m-t-60">
       <a href="/comeingsoon">
         <div class="feature-box center">
           <div class="icon icon-line icon-gray">
             <i class="fa fa-film" aria-hidden="true"></i>
-          </div> 
+          </div>
           <div class="feature-content">
             <h3 class="feature-title">Browse Our Tiles</h3>
           </div>
         </div>
-        </a>
-      </div>
-     
-      <div class="col-lg-3 m-t-60">
-        <a href="/comeingsoon" target="_blank">
+      </a>
+    </div>
+
+    <div class="col-lg-3 m-t-60">
+      <a href="/comeingsoon" target="_blank">
         <div class="feature-box center">
           <div class="icon icon-line icon-gray">
-            <i class="fa fa-envelope-open" aria-hidden="true"></i>
-          </div> 
+            <i class="far fa-address-card"></i>
+          </div>
           <div class="feature-content">
             <h3 class="feature-title">Register For Catalogue</h3>
           </div>
         </div>
-        </a>
-      </div>
-       <div class="col-lg-3 m-t-60">
-        <a href="/comeingsoon">
+      </a>
+    </div>
+    <div class="col-lg-3 m-t-60">
+      <a href="/comeingsoon">
         <div class="feature-box center">
           <div class="icon icon-line icon-gray">
             <i class="fa fa-gift" aria-hidden="true"></i>
-          </div> 
+          </div>
           <div class="feature-content">
             <h3 class="feature-title">Delivery Info</h3>
           </div>
         </div>
-        </a>
-      </div>
-       <div class="col-lg-3 m-t-60">
-        <a href="/comeingsoon">
+      </a>
+    </div>
+    <div class="col-lg-3 m-t-60">
+      <a href="/comeingsoon">
         <div class="feature-box center">
           <div class="icon icon-line icon-gray">
             <i class="fa fa-home" aria-hidden="true"></i>
-          </div> 
+          </div>
           <div class="feature-content">
             <h3 class="feature-title">Commercial Projects</h3>
           </div>
         </div>
-        </a>
+      </a>
+    </div>
+  </div>
+</section>
+
+<div class="landing-featured" style="margin-top:10px; ">
+  <div class="container">
+    <div class="row">
+      <div class="landing-featured-section" style="margin-bottom:30px">
+        <div class="col-md-4">
+          <p><a href="/comeingsoon"><img src="{% static 'images/Tiles-Aug2021.jpg' %}" alt="Tiles"></a></p>
+          <h2 class="hidden-xs visible-sm visible-md visible-lg" style="font-size:28px; margin-bottom:10px">Tiles</h2>
+          <p style="height: 210px;">Welcome to NITCO Tiles. Where inspiration is abound. Choose over thousands of
+            designs inspired by nature. Choose from different looks - wood, marble, vintage, textured, natural, modern
+            and more. Select your choice of tile finishes from glazed to glossy, matte to rustic and much more. Welcome
+            again, to the world of innovation!</p>
+          <p><a href="/comeingsoon" class="desk-primary-btn-black tile-banner-cart">View all products</a> </p>
+          <div class="featured-content">
+            <p> Popular : <a href="/comeingsoon">Ceramic</a>, <a href="vitrified-tiles">Vitrified</a>, <a
+                href="/comeingsoon">Made in Italy</a> </p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <p><a href="/comeingsoon"><img src="{% static 'images/Marble-Aug2021.jpg' %}" alt="Marble"></a></p>
+          <h2 class="hidden-xs visible-sm visible-md visible-lg" style="font-size:28px ;margin-bottom:10px">Marble</h2>
+          <p style="height: 210px;">Bring home an exquisite piece of splendor! Explore world's best quality marble
+            sourced from the finest mines in Italy and around the globe. Enjoy the uniqueness of materials such as
+            marble, granite, onyx, and semi-precious stones, transformed by NITCO into livable surfaces.</p>
+          <p><a href="/comeingsoon" class="desk-primary-btn-black tile-banner-cart">View Marble</a> </p>
+          <div class="featured-content">
+            <p> Popular : <a href="/comeingsoon">White Marble</a>, <a
+                href="/comeingsoon">Beige Marble</a>, <a href="natural-stone?multicolor-marble">Multicolor
+                Marble</a> </p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <p><a href="/comeingsoon"><img src="{% static 'images/Mosaic-Aug2021.jpg' %}" alt="Mosaico"></a></p>
+          <h2 class="hidden-xs visible-sm visible-md visible-lg" style="font-size:28px; margin-bottom:10px">Mosaico</h2>
+          <p style="height: 210px;">Don't settle for routine. Jazz up your spaces with NITCO Mosaico. Check out an array
+            of materials, textures &amp; designs through our collections that help you turn your ideas &amp; dreams into
+            reality. Whether you need your design to be specially crafted in mosaic or have a customisation requirement,
+            we can assist you.</p>
+          <p><a href="mosaico" class="desk-primary-btn-black tile-banner-cart">View Mosaico</a> </p>
+          <div class="featured-content">
+            <p> Popular : <a href="/comeingsoon">Signature</a>, <a
+                href="/comeingsoon">Decor</a>, <a
+                href="/comeingsoon">Steps and Risers</a> </p>
+          </div>
+        </div>
       </div>
     </div>
-  </section>
+  </div>
+</div>
+
 {% endblock %}
