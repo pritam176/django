@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container">
+    <div class="page-header">
+        <p class="h3">Register For Catalogue</p>
+    </div>
+
+    <form method="POST">
+        {% csrf_token %}
+       
+
+        {% for field in form %}
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label" for="id_{{ field.name }}">{{ field.label }}</label>
+            <div class="col-sm-10">
+                <input
+                type="{{ field.field.widget.input_type }}"
+                class="form-control"
+                name="{{ field.name }}"
+                id="id_{{ field.name }}"
+                value="{{ field.value|default:'' }}"
+              >
+                
+            </div>
+        </div>
+        {% endfor %}
+
+        <button type="submit" class="btn btn-primary">Register</button>
+    </form>
+</div>
+{% endblock %}
