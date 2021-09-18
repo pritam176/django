@@ -6,8 +6,8 @@ from django.utils.encoding import smart_str
 
 class CatalogueRegister(models.Model):
     Name = models.CharField(max_length=100)
-    Number = models.IntegerField()
-    WhatsappNo = models.IntegerField()
+    Number = models.CharField(max_length=13)
+    WhatsappNo = models.CharField(max_length=13)
     EmailD = models.CharField(max_length=50)
     Desc = models.TextField()
     CreatedDate = models.DateTimeField(default=timezone.now)
