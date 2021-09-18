@@ -2,8 +2,8 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.views.generic import TemplateView
 
-from home.models import CatalogueRegister
-from home.forms import CatalogueForm
+from .models import CatalogueRegister
+from .forms import CatalogueForm
 
 # Create your views here.
 
