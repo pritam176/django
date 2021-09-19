@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-apwf-^h!aa^&-qyy)_an4$n+wfreu_=r6%x-yjrf6_xtn)*n@@'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*','python176.herokuapp.com']
 
@@ -134,6 +134,8 @@ STATIC_ROOT =  os.path.join(BASE_DIR,'assets')
 
 MEDIA_ROOT =  os.path.join(BASE_DIR,'media')
 MEDIA_URL  = '/media/'
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
