@@ -584,6 +584,21 @@ header
   .header-area .main-nav .nav li.submenu:hover ul, .header-area .main-nav .nav li.submenu:focus ul {
     height: 0px;
   }
+.dhide {
+    display: block !important;
+}.mhide {
+  display: none !important;
+}.homeimg{
+  height: 600Px;
+}.logoimg{
+  display: block !important;
+  height: 82px;
+}.logotest{
+  display: none !important;
+}#page {
+ 
+  padding-top: 84px;
+}
 }
 
 @media (min-width: 767px) {

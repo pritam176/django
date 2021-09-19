@@ -1,7 +1,30 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<script>
+    $(document).ready(function () {
 
+
+        $('#id_Number').on("keyup blur paste", function () {
+            var s = $(this).val();
+            $("#id_WhatsappNo").val(s);
+        });
+    });
+    function valueChanged() {
+        if ($('#id_isSameWaMobNo').is(":checked")) {
+            $('#id_WhatsappNo').prop("readonly", "true");
+            $("#id_WhatsappNo").val($("#id_Number").val());
+
+        }
+
+        else {
+            $('#id_WhatsappNo').prop("readonly", "");
+            $("#id_WhatsappNo").val("");
+
+        }
+
+    }
+</script>
 <div class="container">
     <div class="page-header">
         <p class="h3">Register For Catalogue</p>
@@ -10,22 +33,75 @@
     <form method="POST">
         {% csrf_token %}
        
-
         {% for field in form %}
-        <div class="form-group row">
+        <div class="form-group row has-error">
+            {% if field.name == 'isSubscribe' %}
+            <div class="col-sm-2">{{ field.label }}</div>
+            <div class="col-sm-10">
+            <div class="form-check">
+                <input
+                type="{{ field.field.widget.input_type }}"
+                
+                class="form-check-input"
+                name="{{ field.name }}"
+                id="id_{{ field.name }}"
+                value="{{ field.value }}"
+                checked='checked'
+              >
+              
+            </div>
+            </div>
+
+            {% elif field.name == 'isSameWaMobNo' %}
+            <div class="col-sm-2">{{ field.label }}</div>
+            <div class="col-sm-10">
+            <div class="form-check">
+                <input
+                type="{{ field.field.widget.input_type }}"
+                
+                class="form-check-input"
+                name="{{ field.name }}"
+                id="id_{{ field.name }}"
+                value="{{ field.value }}"
+                checked='checked' onchange="valueChanged()"
+              >
+              
+            </div>
+            </div>
+            
+
+            {% elif field.name == 'Desc' %}
+            
+                <label class="col-sm-2 col-form-label" for="exampleFormControlTextarea1">{{ field.label }}</label>
+                {{ field.name.errors }}
+                <div class="col-sm-10">
+                    <textarea class="form-control" id="id_{{field.name}}" name="{{ field.name }}" rows="5" ></textarea>
+                </div> 
+             
+
+            {% else %}
+
             <label class="col-sm-2 col-form-label" for="id_{{ field.name }}">{{ field.label }}</label>
+          
             <div class="col-sm-10">
                 <input
                 type="{{ field.field.widget.input_type }}"
+                
                 class="form-control"
                 name="{{ field.name }}"
                 id="id_{{ field.name }}"
                 value="{{ field.value|default:'' }}"
               >
-                
+              {% if field.errors %}
+              <div  class="alert alert-danger">{{ field.errors }}</div > 
+              {% endif %}
             </div>
+            {% endif %}
+            
+            
         </div>
         {% endfor %}
+       
 
         <button type="submit" class="btn btn-primary">Register</button>
     </form>
