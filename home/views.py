@@ -8,31 +8,34 @@ from .models import CatalogueDocuments
 
 # Create your views here.
 
-
-def index(request):
-    template_name = 'home.html'
+def headerMenu():
     all_entries = CatalogueDocuments.objects.filter(docType = 'E').filter(isActive='True')
     all_entries2 = CatalogueDocuments.objects.filter(docType = 'T').filter(isActive='True')
     catalogue = all_entries[0]
     tech = all_entries2[0]
+    return {"tech": tech,"catalogue":catalogue}
+def index(request):
+    template_name = 'home.html'
+    
     #print(CatalogueDocuments.objects.filter(docType = 'E').filter(isActive='True').count())
    
-    return render(request, template_name,{"tech": tech,"catalogue":catalogue})
+    return render(request, template_name,headerMenu())
 
 
 def aboutus(request):
-    return render(request, 'aboutus.html')
+    return render(request, 'aboutus.html',headerMenu())
 
 
 def comeingsoon(request):
-    return render(request, 'commingsoon.html')
+    return render(request, 'commingsoon.html',headerMenu())
 
 
 def catalogue(request):
     username = "not logged in"
     print('post')
+    json =headerMenu()
     if request.method == "POST":
-
+        
         MyLoginForm = CatalogueForm(request.POST)
 
         if MyLoginForm.is_valid():
@@ -45,13 +48,18 @@ def catalogue(request):
                 Desc=MyLoginForm.cleaned_data['Desc'],isSubscribe=MyLoginForm.cleaned_data['isSubscribe']
             )
             catalogue.save()
-            return render(request, 'message.html', {"pageTitle": "Register For Catalogue", "pageMsg": "Your Query Saved SUccesfully,Our Team Will Contact soon."})
+            json.update({"pageTitle": "Register For Catalogue", "pageMsg": "Your Query Saved SUccesfully,Our Team Will Contact soon."})
+            return render(request, 'message.html',json )
         else:
             print('in valid')
             print(MyLoginForm.errors.as_data())
-            return render(request, 'catalogueRegister.html', {'form': MyLoginForm})
+          
+            json.update({'form': MyLoginForm})
+            
+            return render(request, 'catalogueRegister.html',json )
     else:
         MyLoginForm = CatalogueForm()
-        return render(request, 'catalogueRegister.html', {'form': MyLoginForm})
+        json.update({'form': MyLoginForm})
+        return render(request, 'catalogueRegister.html', json)
 
 
